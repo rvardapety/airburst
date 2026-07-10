@@ -1,0 +1,6 @@
+option('library',
+       type: 'feature',
+       value: 'enabled',
+       description: 'Compile as a library',
+       yield: true)
+
