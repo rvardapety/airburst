@@ -5,7 +5,8 @@ project('airburst', 'c',
 include_directories = include_directories('include')
 
 sources = [
-    'src/airburst.c'
+    'src/acc_board_xc112.c',
+    'src/airburst.c',
 ]
 
 dependencies = [
