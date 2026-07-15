@@ -10,7 +10,7 @@ sources = [
 ]
 
 dependencies = [
-    dependency('a111')
+    dependency('a111'),
 ]
 
 # dependency

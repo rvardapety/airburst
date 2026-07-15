@@ -26,13 +26,13 @@ static void set_config(acc_detector_distance_configuration_t distance_configurat
     acc_detector_distance_configuration_hw_accelerated_average_samples_set(distance_configuration, EXAMPLE_HWAAS);
 }
 
-static bool run_test(acc_rss_assembly_test_configuration_t configuration)
+static bool run_test(acc_rss_assembly_test_configuration_t test_configuration)
 {
     acc_rss_assembly_test_result_t test_results[ACC_RSS_ASSEMBLY_TEST_MAX_NUMBER_OF_TESTS];
     uint16_t                       nr_of_test_results = ACC_RSS_ASSEMBLY_TEST_MAX_NUMBER_OF_TESTS;
     bool                           all_passed         = true;
 
-    if (!acc_rss_assembly_test(configuration, test_results, &nr_of_test_results))
+    if (!acc_rss_assembly_test(test_configuration, test_results, &nr_of_test_results))
     {
         printf("Airburst check test: Failed to complete\n");
         return false;
